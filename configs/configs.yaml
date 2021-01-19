@@ -1,0 +1,55 @@
+
+card:
+    width: 62
+    height: 85
+
+    zoom: 4
+    
+    corner:
+        xmin: 1
+        xmax: 10
+        ymin: 2.5
+        ymax: 23
+
+    contour_similarity_thresh: 0.9
+
+    suits: ['s','h','d','c']
+    values: ['A','K','Q','J','T','9','8','7','6','5','4','3','2']
+    classes: ['Ac','2c','3c','4c','5c','6c','7c','8c','9c','Tc','Jc','Qc','Kc',
+              'Ad','2d','3d','4d','5d','6d','7d','8d','9d','Td','Jd','Qd','Kd',
+              'Ah','2h','3h','4h','5h','6h','7h','8h','9h','Th','Jh','Qh','Kh',
+              'As','2s','3s','4s','5s','6s','7s','8s','9s','Ts','Js','Qs','Ks']
+
+    dir: 'data/cards/bicycle/bg-green'
+    pck: 'data/cards/bicycle/output/cards.pck'
+    extracted: 'data/cards/bicycle/output'
+
+    mask: 
+        border_size: 2
+        lower_thresh: [0, 50, 0] # Lower range color for bg extractor
+        upper_thresh: [150, 255, 150] # Upper range color for bg extractor
+    bbox:
+        color: [255, 204, 51]
+        thickness: 2
+
+    aug:
+        scale: [0.1, 0.13, 0.15, 0.18, 0.2, 0.23, 0.25, 0.28, 0.3, 0.33, 0.35, 0.38, 0.4, 0.43, 0.45, 0.48, 0.5, 0.53, 0.55, 0.58, 0.6]
+        rotate: !!python/tuple [-180, 180]
+        translate_x: !!python/tuple [-0.5, 0.5]
+        translate_y: !!python/tuple [-0.5, 0.5]
+
+bg: 
+    dtd_dir: 'data/dtd/images'
+    dtd_link: 'https://www.robots.ox.ac.uk/~vgg/data/dtd/download/dtd-r1.0.1.tar.gz'
+
+scene:
+    max_cards_in_scene: 20
+    iou_thresh: 0.5
+    aug_max_tries: 20
+
+output:
+    dims: !!python/tuple [1280, 720]
+    dir: 'data/output/axioma/images/train'
+
+debug:
+    dir: 'debug'
