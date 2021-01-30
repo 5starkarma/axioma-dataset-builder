@@ -6,8 +6,6 @@ import pickle
 from tqdm import tqdm
 import cv2
 
-import imgaug as ia
-from imgaug import augmenters as iaa
 from imgaug.augmentables.bbs import BoundingBox
 
 

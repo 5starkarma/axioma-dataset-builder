@@ -20,6 +20,18 @@ def parse_args():
                         dest='debug',
                         help='Debug mode',
                         action='store_true')
+    parser.add_argument('--single',
+                        dest='single',
+                        help='Single cards dataset builder.',
+                        action='store_true')
+    parser.add_argument('--blackjack',
+                        dest='blackjack',
+                        help='Blackjack hand dataset builder.',
+                        action='store_true')
+    parser.add_argument('--extract',
+                        dest='extract',
+                        help='Extracts all card images.',
+                        action='store_true')
     parser.add_argument('--size', 
                         nargs='?',
                         default=10000,
