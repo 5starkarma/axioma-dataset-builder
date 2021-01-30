@@ -1,0 +1,8 @@
+
+TODO: coding
+    - Make builder work immediately when pulling from git
+        - Project path Root like django
+    - Allow Train/Val sets to be created at once
+    - Allow multiple games to be created at once
+        - Path for each game should be different
+        - Might want to move class list/settings for each game into own yaml

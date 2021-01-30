@@ -6,10 +6,9 @@ import time
 from random import randrange
 import uuid
 import statistics
+import yaml
  
 import cv2
-import yaml
-
 from imgaug import augmenters as iaa
 from imgaug.augmentables.bbs import BoundingBoxesOnImage
 from tqdm import trange
@@ -22,7 +21,7 @@ from utils.arg_parser import parse_args
 
 class DatasetBuilder:
     """
-    Augments and applies card images and bboxes to random background images.
+    Builds card, hand, and game datasets.
     """
     def __init__(self):
         self.args = parse_args()
